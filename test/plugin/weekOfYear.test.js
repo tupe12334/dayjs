@@ -28,6 +28,9 @@ it('Week of year', () => {
   expect(dayjs().weeks(-week).week()).toBe(moment().weeks(-week).week())
   expect(dayjs().weeks(55).week()).toBe(moment().weeks(55).week())
   expect(dayjs().weeks()).toBe(moment().weeks())
+})
+
+test('Year edge case for 2025', () => {
   expect(dayjs('2024-12-28').week()).toBe(52)
   expect(dayjs('2024-12-29').week()).toBe(53)
   expect(dayjs('2024-12-30').week()).toBe(53)
